@@ -1,4 +1,4 @@
-import { Composition } from "remotion";
+import { Composition, Folder } from "remotion";
 import {
   COMP_NAME,
   defaultMyCompProps,
@@ -9,30 +9,69 @@ import {
 } from "../../types/constants";
 import { Main } from "./MyComp/Main";
 import { NextLogo } from "./MyComp/NextLogo";
+import { SmokybillLogo } from "./SmokybillLogo/SmokybillLogo";
+import {
+  KechWafflesMenu,
+  KECH_MENU_DURATION,
+} from "./KechWaffles/KechWafflesMenu";
+import {
+  RamadanSpecial,
+  RAMADAN_DURATION,
+} from "./KechWaffles/RamadanSpecial";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
-      <Composition
-        id={COMP_NAME}
-        component={Main}
-        durationInFrames={DURATION_IN_FRAMES}
-        fps={VIDEO_FPS}
-        width={VIDEO_WIDTH}
-        height={VIDEO_HEIGHT}
-        defaultProps={defaultMyCompProps}
-      />
-      <Composition
-        id="NextLogo"
-        component={NextLogo}
-        durationInFrames={300}
-        fps={30}
-        width={140}
-        height={140}
-        defaultProps={{
-          outProgress: 0,
-        }}
-      />
+      <Folder name="Smokybill">
+        <Composition
+          id="SmokybillLogo"
+          component={SmokybillLogo}
+          durationInFrames={240}
+          fps={30}
+          width={1920}
+          height={1080}
+        />
+      </Folder>
+      <Folder name="Kech-Waffles">
+        <Composition
+          id="KechWafflesMenu"
+          component={KechWafflesMenu}
+          durationInFrames={KECH_MENU_DURATION}
+          fps={30}
+          width={1920}
+          height={1080}
+        />
+        <Composition
+          id="RamadanSpecial"
+          component={RamadanSpecial}
+          durationInFrames={RAMADAN_DURATION}
+          fps={30}
+          width={1920}
+          height={1080}
+        />
+      </Folder>
+      <Folder name="Default">
+        <Composition
+          id={COMP_NAME}
+          component={Main}
+          durationInFrames={DURATION_IN_FRAMES}
+          fps={VIDEO_FPS}
+          width={VIDEO_WIDTH}
+          height={VIDEO_HEIGHT}
+          defaultProps={defaultMyCompProps}
+        />
+        <Composition
+          id="NextLogo"
+          component={NextLogo}
+          durationInFrames={300}
+          fps={30}
+          width={140}
+          height={140}
+          defaultProps={{
+            outProgress: 0,
+          }}
+        />
+      </Folder>
     </>
   );
 };
