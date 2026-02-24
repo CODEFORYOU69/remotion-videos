@@ -25,7 +25,6 @@ const { fontFamily: cairo } = loadCairo("normal", {
 
 // ─── Brand Colors ───
 const GOLD = "#F8B50D";
-const GOLD_DARK = "#C4900A";
 const BG_DARK = "#0D1108";
 const TEXT_LIGHT = "#FAFAF2";
 const RAMADAN_GREEN = "#1B5E20";
@@ -93,7 +92,7 @@ const Lantern: React.FC<{ size?: number; color?: string }> = ({
   </svg>
 );
 
-// ─── Intro Scene: Ramadan Kareem ───
+// ─── Intro Scene: Ramadan Moubarak ───
 const IntroScene: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -221,7 +220,7 @@ const IntroScene: React.FC = () => {
         }}
       />
 
-      {/* Ramadan Kareem */}
+      {/* Ramadan Moubarak */}
       <div
         style={{
           opacity: titleEntrance,
@@ -238,7 +237,7 @@ const IntroScene: React.FC = () => {
             textTransform: "uppercase",
           }}
         >
-          Ramadan Kareem
+          Ramadan Moubarak
         </h1>
         <p
           style={{
@@ -252,7 +251,7 @@ const IntroScene: React.FC = () => {
             opacity: 0.85,
           }}
         >
-          رمضان كريم
+          رمضان مبارك
         </p>
       </div>
 
@@ -357,13 +356,6 @@ const RamadanProductSlide: React.FC<{
     fps,
     config: { damping: 200 },
     durationInFrames: Math.round(1 * fps),
-  });
-
-  const priceEntrance = spring({
-    frame: frame - Math.round(0.6 * fps),
-    fps,
-    config: { damping: 15, stiffness: 100 },
-    durationInFrames: Math.round(0.8 * fps),
   });
 
   // Exit

@@ -54,28 +54,28 @@ const SIGNATURES_SUCREES: ProductData[] = [
 const BASES: ProductData[] = [
   {
     name: "Gaufre Liégeoise",
-    price: "30",
+    price: "35",
     description: "Authentique gaufre liégeoise avec perles de sucre caramélisées",
     image: "gaufreliegeoise.png",
     isHot: true,
   },
   {
     name: "Craffle",
-    price: "35",
+    price: "30",
     description: "Croissant gaufré croustillant",
     image: "croffle.png",
     isHot: true,
   },
   {
     name: "Bubble Waffle",
-    price: "40",
+    price: "30",
     description: "Gaufre bulle en cornet",
     image: "BUBBLETIRA.png",
     isHot: true,
   },
   {
     name: "Pancakes",
-    price: "35",
+    price: "30",
     description: "Stack de pancakes moelleux",
     image: "pancakestiramisu.png",
     isHot: true,
@@ -147,14 +147,14 @@ const SIGNATURES_SALEES: ProductData[] = [
 const BASES_SALEES: ProductData[] = [
   {
     name: "Pizza Waffle",
-    price: "30",
+    price: "35",
     description: "Gaufre croustillante façon pizza",
     image: "wafflepizza.png",
     isHot: true,
   },
   {
     name: "Potato Waffle",
-    price: "37",
+    price: "35",
     description: "Gaufre de pomme de terre vapeur croustillante",
     image: "potatowaffle.png",
     isHot: true,
